@@ -42,7 +42,45 @@
 <body>
 <br>
 <div class="container">
-		<img class="img-responsive" src="pics/logo1.jpg">
+	<div class="row">
+		<div class="col-sm-6">
+			<img class="img-responsive" src="pics/logo1.jpg">
+		</div>
+		<div class="col-sm-6 align-right">
+			<table>
+				<tr>
+					<td><img src="pics/mbIcon.png" width="20" height="30"></td><td><h4>089-695-2041</h4></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img id="lineImg" src="pics/lineIcon.png" width="20" height="20"></a></td><td><h4>ไอดี: wattzhang</h4></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.facebook.com/Merci-Merci-313606548794961/?ref=aymt_homepage_panel">
+					<img src="pics/fbIcon.png" width="20" height="20"></a></td>
+					<td><h4>Merci Merci</h4></td>
+				</tr>
+			</table>
+			<!-- Modal -->
+			<div class="modal fade" id="lineModal" role="dialog">
+				<div class="modal-dialog">
+				
+				  <!-- Modal content-->
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4 class="modal-title">ไลน์ไอดี</h4>
+					</div>
+					<div class="modal-body">
+					  <img src="pics/lineQR.jpg">
+					</div>
+				  </div>
+				</div>
+         	</div>
+		</div>
+  </div>
+
+		</div>
+	</div>
 </div>
 <br>
 <div class="container">
@@ -241,21 +279,21 @@
 							<td>หนังวัว</td>
 						</tr>
 						<tr>
-							<td align="right"><b>พื้น :</b></td>
+							<td align="right"><b>วัสดุพื้น :</b></td>
 							<td>ยาง</td>
 						</tr>
 					</table><br><br>
 					<h4>สีและไซส์</h4>
 					<table class="table table-bordered text-center">
 						<tr>
-							<td bgcolor="#000000">ตำ</td>
+							<td bgcolor="#000000" color="#ffffff">ตำ</td>
 							<td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td>
 						<tr>
-							<td bgcolor="#d95f15">ส้ม</td>
+							<td bgcolor="#d95f15" color="#ffffff">ส้ม</td>
 							<td></td><td>36</td><td>37</td><td>38</td><td>39</td><td></td>
 						</tr>
 						<tr>
-							<td bgcolor="#7f6d53">เขียว</td>
+							<td bgcolor="#7f6d53" color="#ffffff">เขียว</td>
 							<td>35</td><td>36</td><td>37</td><td></td><td></td><td>40</td>
 					</table><br><br>
 				</div>
@@ -273,6 +311,10 @@ $(document).ready(function(){
     $("#myImg").click(function(){
         $("#myModal").modal({backdrop: "static"});
     });
+    $("#lineImg").click(function(){
+        $("#lineModal").modal({backdrop: "static"});
+    });
+
     // Activate Carousel
     $("#myCarousel").carousel({interval: false});
 	
